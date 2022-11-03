@@ -44,3 +44,4 @@ buttonJump.onclick = () => {
         document.querySelector('.mario').classList.remove('jump')}, 600)
 }
 addEventListener('keydown', jumpKey);
+
