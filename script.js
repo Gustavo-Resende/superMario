@@ -37,3 +37,4 @@ const loop = setInterval(()=>{
 }, 10);
 
 addEventListener('keydown', jumpKey);
+addEventListener('click', jumpKey)
