@@ -3,6 +3,7 @@ const body = document.querySelector('body')
 const jump = document.querySelector('.jump')
 const mario = document.querySelector('.mario')
 const clouds = document.querySelector('.cloud')
+var buttonJump = document.getElementById('buttonJump')
 
 function jumpKey(){
     document.querySelector('.mario').classList.add('jump')
@@ -19,7 +20,7 @@ const loop = setInterval(()=>{
 
     console.log(marioPosition)
 
-    if (pipePosition <= 120 && marioPosition < 100 && pipePosition > 0) {
+    if (pipePosition <= 120 && marioPosition < 70 && pipePosition > 0) {
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
 
@@ -36,5 +37,9 @@ const loop = setInterval(()=>{
     }
 }, 10);
 
+buttonJump.onclick = () => {
+    document.querySelector('.mario').classList.add('jump')
+    setTimeout(()=>{
+        document.querySelector('.mario').classList.remove('jump')}, 600)
+}
 addEventListener('keydown', jumpKey);
-addEventListener('click', jumpKey)

@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 .game-board-display{
-    border-bottom: 100px solid rgb(7, 148, 38);
-    height: 100vh;
+    height: 94vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
@@ -16,7 +20,8 @@
     position: absolute;
     bottom: 0;
     width: 5rem;
-    animation: pipe 2s infinite linear;
+    height: 5rem;
+    animation: pipe 3s infinite linear;
 }
 
 .mario{
@@ -39,6 +44,16 @@
     position: absolute;
     animation: clouds-animation 20s ease-out infinite;
 }
+
+.piso{
+    height: 6vh;
+    background-image: url(assets/piso.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 2px solid;
+    position: relative;
+}
+
 
 @keyframes pipe {
     from{
@@ -81,3 +96,96 @@
         right: 100%;
     }
 }
+
+@keyframes piso1-animation{
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@media (min-width: 1024px){
+    .button-jump{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .pipe{
+        width: 3rem;
+        height: 4rem;
+        animation: pipe 2s infinite linear;
+    }
+
+    .mario{
+        width: 6rem;
+    } 
+
+    .game-over{
+        width: 4rem;
+    }
+
+    .button-jump{
+        bottom: 7rem;
+        right: 7rem;
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 180px;
+        background-color: #0a0a0a3d;
+        border: none;
+        font-size: 20px;
+        color: #E0F6FF;
+    }
+}
+
+@media (max-width: 768px){
+
+    .pipe{
+        width: 3rem;
+        height: 4rem;
+        animation: pipe 1.1s infinite linear;
+    }
+
+    .mario{
+        width: 6rem;
+    } 
+
+    .game-over{
+        width: 4rem;
+    }
+
+    .button-jump{
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
+@media (max-width: 425px){
+
+    .pipe{
+        width: 3rem;
+        height: 4rem;
+        animation: pipe 1.1s infinite linear;
+    }
+
+    .mario{
+        width: 5rem;
+    } 
+
+    .game-over{
+        width: 4rem;
+    }
+
+    .button-jump{
+        height: 6rem;
+        width: 6rem;
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+
