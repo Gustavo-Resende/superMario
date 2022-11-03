@@ -4,16 +4,12 @@
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-}
-
 .game-board-display{
-    height: 94vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
+    border-bottom: 7vh solid green;
 }
 
 .pipe{
@@ -45,13 +41,12 @@ body{
     animation: clouds-animation 20s ease-out infinite;
 }
 
-.piso{
-    height: 6vh;
-    background-image: url(assets/piso.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top: 2px solid;
-    position: relative;
+.button-jump{
+    height: 19rem;
+    width: 19rem;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid red;
 }
 
 
@@ -88,16 +83,6 @@ body{
 }
 
 @keyframes clouds-animation {
-    from {
-        right: 0;
-    }
-
-    to {
-        right: 100%;
-    }
-}
-
-@keyframes piso1-animation{
     from {
         right: 0;
     }
