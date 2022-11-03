@@ -34,7 +34,7 @@ const loop = setInterval(()=>{
         clouds.style.left = `${cloudPosition}px`;
 
         clearInterval(loop)
-        
+
     }
 }, 10);
 
