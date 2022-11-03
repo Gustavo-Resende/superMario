@@ -46,7 +46,11 @@
     width: 19rem;
     position: absolute;
     bottom: 0;
-    border: 1px solid red;
+    right: 4rem;
+    border: none;
+    border-radius: 180px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: rgb(255, 255, 255);
 }
 
 @keyframes pipe {
@@ -88,12 +92,6 @@
 
     to {
         right: 100%;
-    }
-}
-
-@media (min-width: 1024px){
-    .button-jump{
-        display: none;
     }
 }
 
