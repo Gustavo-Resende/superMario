@@ -95,6 +95,36 @@
     }
 }
 
+@media (max-width: 1920px){
+
+    .pipe{
+        width: 3rem;
+        height: 4rem;
+        animation: pipe 2s infinite linear;
+    }
+
+    .mario{
+        width: 6rem;
+    } 
+
+    .game-over{
+        width: 4rem;
+    }
+
+    .button-jump{
+        bottom: 7rem;
+        right: 7rem;
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 180px;
+        background-color: #0a0a0a3d;
+        border: none;
+        font-size: 20px;
+        color: #E0F6FF;
+    }
+}
+
 @media (max-width: 1024px){
 
     .pipe{
